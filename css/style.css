@@ -1,0 +1,423 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  color: #0389ff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+}
+
+/* Navigation */
+.site-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-navigation .logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.site-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-menu li {
+  margin-left: 20px;
+}
+
+.site-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.site-menu a:hover {
+  color: #0389ff;
+}
+
+/* Skillset Section */
+#skillset-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+#skillset-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.progressbar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid #0389ff;
+  position: relative;
+  margin: 0 auto;
+}
+
+.circle .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #0389ff;
+}
+
+.caption {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Horizontal Layout for Skillset (side by side) */
+.skillset-row {
+  display: flex;
+  justify-content: space-evenly; /* Distribute evenly across the row */
+  align-items: center; /* Vertically align the circles */
+}
+
+.skillset-row .col {
+  flex: 1; /* Each item takes equal width */
+  text-align: center; /* Center text inside each column */
+  margin: 0 5px; /* Space between each circle */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle .number {
+    font-size: 20px;
+  }
+
+  .caption {
+    font-size: 14px;
+  }
+
+  /* Stack items vertically on small screens */
+  .skillset-row {
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+
+  .skillset-row .col {
+    flex: 0 0 50%; /* Take 50% width on small screens */
+    margin-bottom: 20px; /* Add space between stacked items */
+  }
+}
+
+
+
+
+/* Home Section */
+.home-section {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.home-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.portfolio-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Portfolio Details Section */
+/* Portfolio Details Section */
+.portfolio-details {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.portfolio-details h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details p {
+  font-size: 16px;
+  color: #666;
+}
+
+.portfolio-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the images */
+  flex-wrap: wrap; /* Ensure the images wrap on smaller screens */
+  margin-bottom: 20px;
+}
+
+.portfolio-images img {
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Limit maximum height */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.portfolio-description {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  /* Mobile and Tablet (Portrait) Layout */
+  .portfolio-images img {
+    max-width: 90%; /* Scale images down on smaller screens */
+  }
+}
+
+
+/* About Section */
+.about-section {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.services-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-section form button {
+  padding: 12px 30px;
+  background-color: #0389ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section form button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    padding: 15px;
+  }
+}
+
+/* Service Section */
+.service {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service .icon-service {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.service .icon-service img {
+  max-width: 50px;
+  height: auto;
+}
+
+.service h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Ensure grid items are responsive */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.col-6 {
+  width: 100%;
+}
+
+.col-sm-6 {
+  width: 50%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-lg-4 {
+  width: 33.33%;
+}
+
+/* Ensure a mobile-friendly design */
+@media (max-width: 767px) {
+  .service {
+    padding: 15px;
+  }
+
+  .service img {
+    max-width: 40px;
+  }
+
+  .service h3 {
+    font-size: 18px;
+  }
+}
